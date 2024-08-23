@@ -33,6 +33,10 @@ public class DriverFactory {
 	private static ThreadLocal<WebDriver> tlDriver= new ThreadLocal<WebDriver>();
 	
 	public WebDriver initDriver(String browser) {
+		
+		/**
+		 * Browser Name provided from properties files
+		 */
 		if(browser.equalsIgnoreCase("chrome")) {
 			co= new ChromeOptions();
 			//co.addArguments("--headless");
